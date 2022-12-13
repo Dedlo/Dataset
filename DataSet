@@ -1,0 +1,74 @@
+import numpy as np
+import pandas as pd
+df=pd.read_csv("team_data.csv")
+df
+df=pd.read_csv("team_data.csv",index_col=0)
+df.head()
+len(df.index)
+x=df.columns
+x
+x=np.sort(x)
+x
+len(x)
+x=["aerials_yo'qotilgan", 'aerials_won', 'aerials_won_pct', "yordamli_o'qlar",
+       'assist', 'assists_per 90', "o'rtacha_zarba_masofa", "o'rtacha_yosh",
+       "to'pni_tiklashlar", 'bloklangan_paslar', 'bloklangan_otishmalar', 'bloklar',
+       'kartalar_qizil', 'kartalar_sariq', 'kartalar_sariq_qizil', "bo'sh joylar",
+       "burchak_to'plari", "burchak_to'plari", 'burchak_tepkilari',
+       "to'g'ridan-to'g'ri burchakli zarbalar", "to'p uzatishlar", "jarima_maydoniga_o'tishlar",
+       'egasiz', 'dribble_tackles', 'dribble_tackles_pct',
+       'dribbled_past', 'dribbles', 'dribbles_completed',
+       'dribbles_completed_pct', 'dribbles_vs', 'xato', 'pouled',
+       'qoidabuzarliklar', "o'yinlar", "o'yinlar_tugallangan", "o'yinlar_boshlanadi", "o'yinlar_obunalari",
+       'gca', 'gca_defense', 'gca_dribbles', 'gca_fouled',
+       'gca_passes_dead', 'gca_passes_live', 'gca_per90', 'gca_shots',
+       'gk_avg_distance_def_actions', 'gk_clean_sheets',
+       'gk_clean_sheets_pct', 'gk_corner_kick_goals_gainst',
+       'gk_crosses', 'gk_crosses_stopped', 'gk_crosses_stopped_pct',
+       'gk_def_actions_outside_pen_area',
+       'gk_def_actions_outside_pen_area_per90',
+       'gk_free_kick_goals_gainst', 'gk_games', 'gk_games_starts',
+       'gk_goal_kick_length_avg', 'gk_goal_kicks', 'gk_goals_gainst',
+       'gk_goals_gainst_per90', 'gk_losses', 'gk_minutes',
+       'gk_goals_gainst', 'gk_passes',
+       'gk_passes_completed_launched', 'gk_passes_launched',
+       'gk_passes_length_avg', 'gk_passes_pct_launched',
+       'gk_passes_throws', 'gk_pct_goal_kicks_launched',
+       'gk_pct_passes_launched', 'gk_pens_allowed', 'gk_pens_att',
+       'gk_pens_missed', 'gk_pens_save_pct', 'gk_pens_saqed',
+       'gk_psnpxg_per_shot_on_target_gainst', 'gk_psxg', 'gk_psxg_net',
+       'gk_psxg_net_per90', 'gk_save_pct', 'gk_saves',
+       'gk_shots_on_target_ainst', 'gk_ties', 'gk_wins', 'gollar',
+       'gollar_yordamchi_qalamlar_har 90', 'gol_assists_har90', 'gol_qalamlar',
+       'goals_pens_har 90', 'gols_for 90', 'gols_har bir 90',
+       "maqsaddagi_bosh_otish_gollari", "to'siqlar", "daqiqalar",
+       'daqiqa_90s', 'daqiqa_pct', "har_o'yinga_daqiqa",
+       'boshlash_boshiga_daqiqa', 'har_sub_daqiqa', "noto'g'ri boshqarishlar", 'npxg',
+       'npxg_net', 'npxg_per90', 'npxg_per_shot', 'npxg_xg_assist',
+       'npxg_xg_assist_per90', 'offsaydlar', 'goals_gainst',
+       'gollar_uchun', 'on_xg_ga qarshi', 'on_xg_for', "o'z_gollari",
+       "o'tish_xa", "o'tish", "o'tish_bloklangan", "o'tish_tugallangan",
+       "o'tish_tugallangan_uzoq", "o'tish_tugallangan_medium",
+       'bajarildi_qisqa', "o'lik_pas", "erkin_toplarni_pas",
+       "uchinchi_finalga_o'tadi", "jarima_maydoniga_o'tadi",
+       "jonli_o'tadi", "uzoq_o'tadi", "o'rta_o'tadi", "o'yindan_o'tadi",
+       'passes_pct', 'passes_pct_long', 'passes_pct_medium',
+       'passes_pct_short', 'progressive_distance',
+       "o'tadi_qabul", "o'tadi_qisqa", "o'tish_ko'chma",
+       "jami_masofadan_o'tadi", 'pens_att', 'qalamlar_talab qilingan', 'qalamlar_yasalgan',
+       'pens_won', "ishlatilgan_o'yinchilar", 'plus_minus', 'plus_minus_per90',
+       "har_o'yin_ballari", "egalik qilish", 'progressiv_paslar',
+       'progressive_passes_received', 'sca', 'sca_defense',
+       'sca_dribbles', 'sca_fouled', 'sca_passes_dead', 'sca_passes_live',
+       'sca_per90', 'sca_shots', 'shots', 'shots_free_kicks',
+       "nishon_to'g'risida_otishlar", "n'on_ko'p_ko'rsatkichlar", "nishon_to'g'rida_otishlar",
+       'shots_per90', 'tackles', 'tackles_att_3rd', 'tackles_def_3rd',
+       "tackles_to'siqlar", 'tackles_mid_3rd', 'tackles_won',
+       "to'plar_orqali", 'otish_otish', 'tegishlar', 'tegishlar_3rd',
+       'touches_att_pen_area', 'touches_def_3rd', 'touches_def_pen_area',
+       'touches_live_ball', 'touches_mid_3rd', 'foydalanishsiz_obunalar', 'xg',
+       'xg_assist', 'xg_assist_net', 'xg_assist_per90', 'xg_net',
+       'xg_per90', 'xg_plus_minus', 'xg_plus_minus_per90',
+       'xg_xg_assist_per90']
+df.columns=x
+df
